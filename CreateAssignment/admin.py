@@ -1,8 +1,8 @@
 from django.contrib import admin
-from . models import Instructions, createlink
+from . models import createlink, Instruction
 
 admin.site.register(createlink)
-admin.site.register(Instructions)
+admin.site.register(Instruction)
 
 
 

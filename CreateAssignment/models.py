@@ -1,3 +1,4 @@
+from os import link
 from django.db import models
 import random
 from django.contrib.auth.models import User
@@ -23,12 +24,10 @@ class createlink(models.Model):
     def get_absolute_url(self):
         return reverse('CreateAssignment-home')
 
-class Instructions(models.Model):
-    inst_1 = models.CharField(max_length=500)
-    inst_2 = models.CharField(max_length=500)
-    inst_3 = models.CharField(max_length=500)
-    inst_4 = models.CharField(max_length=500)
-    inst_5 = models.CharField(max_length=500)
+
+class Instruction(models.Model):
+    assignment = models.OneToOneField(createlink,on_delete =models.CASCADE)
+    instructions = models.TextField(max_length=500, blank= True)
 
     def get_absolute_url(self):
         return reverse('CreateAssignment-instructions')

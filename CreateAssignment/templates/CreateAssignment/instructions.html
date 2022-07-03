@@ -13,11 +13,7 @@
     <h1>Add Instructions</h1>
     <form method="POST">
         {% csrf_token %}
-        <input type = "text"  name="inst_1" id="inst_1" placeholder ="Write instructions here ..." >
-        <input type = "text"  name="inst_2" id="inst_2" placeholder ="Write instructions here ..." >
-        <input type = "text"  name="inst_3" id="inst_3" placeholder ="Write instructions here ..." >
-        <input type = "text"  name="inst_4" id="inst_4" placeholder ="Write instructions here ..." >
-        <input type = "text"  name="inst_5" id="inst_5" placeholder ="Write instructions here ..." >
+        <textarea name="instructions" id="inst" cols="100" rows="10" placeholder ="Write instructions here ..." ></textarea>    
 
         <button type="submit" class="submitb">Update Instructions</button>
 
